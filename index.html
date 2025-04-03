@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="header">
+  <header id="header" class="bg-gray-200">
     <div id="bg-field">
       <div id="header-content">
         <div class="photo">
@@ -20,13 +20,31 @@
         tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.</div>
       </div>
       <div>
-        <div class="technologies">
-          <img src="./media/icons/GitHub.svg" alt="logo HTML">
-          <img src="./media/icons/HTML.svg" alt="">
-          <img src="./media/icons/CSS.svg" alt="">
-          <img src="./media/icons/JavaScript.svg" alt="">
-          <img src="./media/icons/React.svg" alt="">
-          <img src="./media/icons/Node.js.svg" alt="">
+        <div id="technologies">
+          <div class="tech-icons-component">
+            <img src="./media/icons/GitHub.svg" alt="logo Github">
+            <p>GitHub</p>
+          </div>
+          <div class="tech-icons-component">
+            <img src="./media/icons/HTML.svg" alt="">
+            <p>HTML</p>
+          </div>
+          <div class="tech-icons-component">
+            <img src="./media/icons/CSS.svg" alt="">
+            <P>CSS</P>
+          </div>
+          <div class="tech-icons-component">
+            <img src="./media/icons/JavaScript.svg" alt="">
+            <P>Javascript</P>
+          </div>
+          <div class="tech-icons-component">
+            <img src="./media/icons/React.svg" alt="">
+            <p>React</p>
+          </div>
+          <div class="tech-icons-component">
+            <img src="./media/icons/Node.js.svg" alt="">
+            <p>Node</p>
+          </div>
         </div>
       </div>
       <div class="arrow">
@@ -35,7 +53,7 @@
     </div>
   </header>
   <main id="main">
-    <section id="projects-field" class="bg-gray-300">
+    <section id="projects-field" class="bg-gray-200">
       <p class="text-section-subtitle subtitle text-red">Meu trabalho</p>
       <p class="text-section-title title-md text-gray-600">Veja os projetos em destaque</p>
       <div class="projects-components">
@@ -83,60 +101,63 @@
         </div>
       </div>
     </section>
-    <div id="skills-field">
-      <div class="field">Meus serviços</div>
-      <div class="text">Como posso ajudar o seu negócio</div>
+    <div id="skills-field" class="bg-gray-100">
+      <p class="text-section-subtitle subtitle text-red">Meus serviços</p>
+      <p class="text-section-title title-md text-gray-600">Como posso ajudar o seu negócio</p>
       <div class="skills">
         <div class="skill-component">
           <img src="./media/icons/Devices.png" alt="devices img">
           <div class="text-area">
-            <p class="title-device">Websites e Aplicativos</p>
-            <p>Desenvolvimento de interfaces</p>
+            <p class="title-device title-sm text-gray-600">Websites e Aplicativos</p>
+            <p class="text-sm text-gray-500">Desenvolvimento de interfaces</p>
           </div>
         </div>
         <div class="skill-component">
           <img src="./media/icons/HardDrives.png" alt="devices img">
           <div class="text-area">
-            <p class="title-device">API e banco de dados</p>
-            <p>Criação de serviços do sistema</p>
+            <p class="title-device title-sm text-gray-600">API e banco de dados</p>
+            <p class="text-sm text-gray-500">Criação de serviços do sistema</p>
           </div>
         </div>
         <div class="skill-component">
           <img src="./media/icons/Infinity.png" alt="devices img">
           <div class="text-area">
-            <p class="title-device">DevOps</p>
-            <p>Gestão e infraestrutura da aplicação</p>
+            <p class="title-device title-sm text-gray-600">DevOps</p>
+            <p class="text-sm text-gray-500">Gestão e infraestrutura da aplicação</p>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer>
-    <div class="field">Contato</div>
-    <div class="text">Gostou do meu trabalho?</div>
-    <div class="contact-call">Entre em contato ou acompanhe as minhas redes sociais!</div>
+  <footer id="footer" class="bg-gray-200">
+    <div class="contact-field">
+      <p class="text-section-subtitle subtitle text-purple">Contato</p>
+      <p class="title-md text-gray-600">Gostou do meu trabalho?</p>
+      <p class="text-md text-gray-500">Entre em contato ou acompanhe as minhas redes sociais!</p>
+    </div>
     <div class="socials">
-      <div class="btn-component">
+      <div id="social-btn-linkedin" class="btn-component">
         <img src="./media/icons/LinkedinLogo.png" alt="LinkedIn Logo">
         <p class="text-gray-500">LinkedIn</p>
         <img src="./media/icons/ArrowUpRight.png" alt="">
       </div>
-      <div class="btn-component">
+      <div id="social-btn-instagram" class="btn-component">
         <img src="./media/icons/InstagramLogo.png" alt="Instagram Logo">
         <p class="text-gray-500">Instagram</p>
         <img src="./media/icons/ArrowUpRight.png" alt="">
       </div>
-      <div class="btn-component">
+      <div id="social-btn-github" class="btn-component">
         <img src="./media/icons/GithubLogo.png" alt="Github Logo">
         <p class="text-gray-500">Github</p>
         <img src="./media/icons/ArrowUpRight.png" alt="">
       </div>
-      <div class="btn-component">
+      <div id="social-btn-email" class="btn-component">
         <img src="./media/icons/EnvelopeSimple.png" alt="E-mail Logo">
         <p class="text-gray-500">E-mail</p>
         <img src="./media/icons/ArrowUpRight.png" alt="">
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
