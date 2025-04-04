@@ -2,6 +2,7 @@
 
 :root{
   --red: #E3646E;
+  --red-transparent: #e3646f9a;
   --purple: #BB72E9;
   --blue: #3996DB;
   --green: #82BC4F;
@@ -23,6 +24,9 @@
 
 .bg-red{
   background-color: var(--red);
+}
+.bg-red-transparent{
+  background-color: var(--red-transparent);
 }
 .bg-purple{
   background-color: var(--purple);
@@ -179,6 +183,7 @@
   gap: 20px;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
 
   width: 270px;
   height: 140px;
@@ -186,7 +191,15 @@
   background-color: inherit;
   border: 2px solid var(--gray-200);
   border-radius: 12px;
-  
+
+  &>.mask {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 33px;
+    height: 33px;
+    mix-blend-mode: darken;
+  }  
 
   &>.text-area {
     display: flex;
@@ -236,6 +249,7 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   height: 40px;
   min-width: 114px;
@@ -244,6 +258,14 @@
   border-radius: 25px;
   font-family: "Asap", sans-serif;
   color: var(--gray-500);
+
+  &>.mask{
+    position: absolute;
+    left: 20px;
+    width: 33px;
+    height: 33px;
+    mix-blend-mode: darken;
+  }
 }
 
 body{
@@ -328,14 +350,16 @@ body{
 
 #technologies{
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   justify-content: center;
 }
 
-.arrow{
+#arrow{
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
+  animation: 1s ease-in-out infinite arrowAnimation;
 }
 
 /* MAIN */
@@ -348,7 +372,6 @@ body{
 
   width: 100%;
   padding: 72px 120px 144px;
-  text-align: center;
 }
 
 .projects-components{
@@ -357,6 +380,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1040px;
 }
 
 .text-section-subtitle{
@@ -388,8 +412,14 @@ body{
   align-items: center;
   justify-content: center;
 
+  height: 787px;
+  width: 100%;
   padding: 128px 120px 200px;
   text-align: center;
+  background-image: url("./media/bg/Background_Contacts.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contact-field{
@@ -403,4 +433,16 @@ body{
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@keyframes arrowAnimation {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
